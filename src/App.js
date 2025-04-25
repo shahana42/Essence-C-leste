@@ -18,12 +18,12 @@ function App() {
             background: "#fff",
             display: "flex",
             alignItems: "center",
-            padding: "0 40px",
+            padding: "0 20px",
           }}
         >
           {/* Left: Logo */}
-          <div style={{ width: "200px", fontSize: "24px", fontWeight: "bold" }}>
-            <Link to="/" style={{ color: "black" }}>
+          <div style={{ minWidth: "150px", fontSize: "24px", fontWeight: "bold" }}>
+            <Link to="/" style={{ color: "black", textDecoration: "none" }}>
               Essence Céleste
             </Link>
           </div>
@@ -33,36 +33,34 @@ function App() {
             <Menu
               mode="horizontal"
               selectable={false}
-              style={{ background: "transparent" }}
+              overflowedIndicator={null}
+              style={{
+                background: "transparent",
+                fontWeight: 500,
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "nowrap",
+                gap: "30px", // add space between items
+                fontSize: "16px",
+              }}
             >
               <Menu.Item key="home">
-                <span onClick={() => (window.location.href = "/")}>Home</span>
+                <Link to="/" style={{ color: "black" }}>Home</Link>
               </Menu.Item>
               <Menu.Item key="product">
-                <span onClick={() => (window.location.href = "/product")}>
-                  Product
-                </span>
+                <Link to="/product" style={{ color: "black" }}>Product</Link>
               </Menu.Item>
               <Menu.Item key="about">
-                <span onClick={() => (window.location.href = "/about")}>
-                  About
-                </span>
+                <Link to="/about" style={{ color: "black" }}>About</Link>
               </Menu.Item>
-              {/* <Menu.Item key="blog">
-                <span onClick={() => (window.location.href = "/blog")}>
-                  Blog
-                </span>
-              </Menu.Item> */}
               <Menu.Item key="contact">
-                <span onClick={() => (window.location.href = "/contact")}>
-                  Contact
-                </span>
+                <Link to="/contact" style={{ color: "black" }}>Contact</Link>
               </Menu.Item>
             </Menu>
           </div>
 
-          {/* Right: Spacer (can be used later for profile/cart/etc) */}
-          <div style={{ width: "200px" }} />
+          {/* Right: Spacer (Smaller) */}
+          <div style={{ minWidth: "50px" }} />
         </Header>
 
         <Content style={{ minHeight: "100vh" }}>

@@ -3,13 +3,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Home.css';
 
-import perfume1 from '../Images/perfume1.jpg';
-import perfume2 from '../Images/perfume2.jpg';
-import perfume3 from '../Images/perfume3.jpg';
-import perfume4 from '../Images/perfume4.jpg';
+import perfume11 from '../Images/perfume11.jpg';
+import perfume22 from '../Images/perfume22.jpg';
+import perfume33 from '../Images/perfume33.jpg';
+import perfume44 from '../Images/perfume44.jpg';
 
 
-const images = [perfume1, perfume2, perfume3, perfume4]; 
+const images = [perfume11, perfume22, perfume33, perfume44]; 
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
